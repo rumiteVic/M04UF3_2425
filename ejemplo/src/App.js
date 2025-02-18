@@ -11,6 +11,7 @@ function App() {
           Esto es prueba <code>src/App.js</code> probando hehe.
 	  Estoy probando cosas.
         </p>
+	<h2>Probanding</h2>
         <a
           className="App-link"
           href="https://reactjs.org"
