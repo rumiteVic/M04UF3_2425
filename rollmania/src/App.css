@@ -1,5 +1,17 @@
+l
 .App {
-	display:flex;
-	justify-content:center;
-	align-items:center;
+
+    justify-content:center;
+    align-items:center;
+    align-content:center;
 }
+
+.fila1{
+display:flex;
+align-items:center;
+align-content:center;
+}
+.fila2{
+display:flex;
+align-items:center;
+align-content:center;
