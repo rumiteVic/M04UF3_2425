@@ -1,17 +1,6 @@
-l
-.App {
-
-    justify-content:center;
-    align-items:center;
-    align-content:center;
+.App{
+	display:flex;
+	justify-content:center;
+	align-items:center;
 }
 
-.fila1{
-display:flex;
-align-items:center;
-align-content:center;
-}
-.fila2{
-display:flex;
-align-items:center;
-align-content:center;
