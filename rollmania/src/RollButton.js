@@ -1,30 +1,23 @@
 import './RollButton.css';
 import { useState, useEffect } from 'react';
 
+
 function RollButton(props) {
 
-    const [count, setCount] = useState(0);
+let [count, setCount] = useState(5);
 
-    useEffect(() => {
-        if(count > 0){
-    const intervalId = setInterval(() => {
-      setCount(c => c - 1);
-    }, 1000);
-    return () => clearInterval(intervalId);
-        }
-  }, [count]);
-
-function click (){
-if(count === 0){
-    setCount(5);
-    props.roll_func();
-}
-}
+useEffect(() => {
+	setTimeout (() => {
+		setCount(count -1);
+	}, 1000);
+});
 
   return (
-    <button className="RollButton" onClick={click} >
-    {count > 0? `${count}` : "Roll!!!" }
-    </button>
+    <button className="RollButton" onClick={props.roll_func}
+		disabled={count > 0 ? "true" : ""}
+		>
+    {count > 0 ? count : "Roll!!!"}
+		</button>
   );
 }
 

@@ -1,7 +1,7 @@
-.rollmania {
-	display:flex;    
+.Scores {
+	display:flex;
+	justify-content:center;
+	align-items:center;
 }
 
-.mania{
-align-items:center;
-}
+
