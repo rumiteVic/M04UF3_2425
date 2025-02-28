@@ -1,13 +1,20 @@
 import './Scores.css';
-import { useState } from 'react';
-
-function PlayerName(props) {
-let [player_name, setPlayerName] = useState("");
 
 
+
+
+
+function Scores(props) {
   return (
-	<p><input type="text" name="player_name" placeholder={player_name === "" ? "Nombre del jugador" : player_name} /><button>Guardar</button></p>
- );
+    <section className="Scores">
+			<h2>Scores</h2>
+
+			<ol>
+				<li>Jacinto: 33</li>
+
+			</ol>
+		</section>
+);
 }
 
-export default PlayerName;
+export default Scores;
