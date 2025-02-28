@@ -13,7 +13,8 @@ useEffect(() => {
 });
 
   return (
-    <button className="RollButton" onClick={props.roll_func}
+    <button className="RollButton" 
+		onClick={props.roll_func}
 		disabled={count > 0 ? "true" : ""}
 		>
     {count > 0 ? count : "Roll!!!"}

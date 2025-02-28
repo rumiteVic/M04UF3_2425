@@ -1,12 +1,21 @@
 import './Dice.css';
 import Die from './Die.js';
+import { useRef } from 'react';
 
 function Dice(props) {
-	let total = 0;
+	const total = useRef(0);
+	const counter = useRef(0);
+
 	function add_result (value) {
-		total +=value;
-		console.log(value+" "+total);
+		total.current +=value;
+		console.log(value+" "+total.current);
+		counter.current++;
+		
+		if (counter.current == props.cantidad){
+			props.onTotal(total.current);
+		}
 	}
+
 function get_dice (quantity, roll) {
 
 	let dice_list = [];
