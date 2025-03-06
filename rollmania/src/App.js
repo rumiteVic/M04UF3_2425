@@ -9,10 +9,10 @@ import { useState, useRef } from 'react';
 
 function App() {
 
-	const [roll, setRoll] = useState(false);
+	const [roll, setRoll] = useState(false);	
+	const [score, setScore] = useState({});
 	const player_name = useRef("");
 	const player_score = useRef(0);
-
 	function roll_dice ()
 	{
 		setRoll(true);
@@ -26,8 +26,11 @@ function App() {
 	function set_player_score (total) {
 		player_score.current = total;
 		console.log("Puntuación total:"+total);
+		
 	}
 
+
+	
   return (
 		<div className="rollmania">
 			<Title title_text="Rollmania!!!" />

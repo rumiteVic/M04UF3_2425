@@ -18,6 +18,7 @@ function update_name (event) {
 	function write_name(event) {
 		console.log("Nombre: "+player_name);
 		let pn_tmp = player_name.trim();
+		
 
 		if (pn_tmp.length < 3 || pn_tmp > 12)
 		return;
