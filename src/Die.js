@@ -1,18 +1,18 @@
 import './Die.css';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+
 
 function Die(props) {
 
 	const [number, setNumber] = useState("-");
-	
+
 	const randomized = useRef(false);
-	
-	useEffect (() => {
-  if (number != "-"){
-  props.onResult(number);
-  }
-  });
+
+	useEffect( () => {
+		if (number != "-")
+			props.onResult(number);
+	} );
 
 	function get_random ()
 	{
@@ -24,13 +24,12 @@ function Die(props) {
 		let r = get_random();
 		setNumber(r);
 	}
+
 	if (props.roll && !randomized.current){
-		
 		set_random();
-		
+
 		randomized.current = true;
 	}
-
 
   return (
     <button className="Die" onClick={set_random}>
